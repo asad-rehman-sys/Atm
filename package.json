@@ -1,0 +1,17 @@
+{
+  "name": "atm-system",
+  "version": "2.0.0",
+  "description": "ATM System with Frontend, Backend & Database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node cli.js",
+    "server": "node server.js",
+    "cli": "node cli.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  }
+}

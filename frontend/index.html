@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM — National Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="atm-enclosure">
+        <!-- Top bezel -->
+        <div class="bezel-top">
+            <div class="camera-dot"></div>
+            <div class="brand-text">NATIONAL BANK</div>
+            <div class="camera-dot"></div>
+        </div>
+
+        <div class="screen-assembly">
+            <!-- LEFT function buttons -->
+            <div class="side-buttons side-left">
+                <button class="fn-btn" data-side="left" data-slot="0"><span class="fn-arrow">▶</span></button>
+                <button class="fn-btn" data-side="left" data-slot="1"><span class="fn-arrow">▶</span></button>
+                <button class="fn-btn" data-side="left" data-slot="2"><span class="fn-arrow">▶</span></button>
+                <button class="fn-btn" data-side="left" data-slot="3"><span class="fn-arrow">▶</span></button>
+                <button class="fn-btn" data-side="left" data-slot="4"><span class="fn-arrow">▶</span></button>
+                <button class="fn-btn" data-side="left" data-slot="5"><span class="fn-arrow">▶</span></button>
+            </div>
+
+            <!-- SCREEN -->
+            <div class="screen">
+                <div class="screen-inner" id="screenInner">
+                    <!-- Header Bar -->
+                    <div class="top-bar">
+                        <div class="top-bar-left">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                            <span id="cardLabel">INSERT CARD</span>
+                        </div>
+                        <div class="top-bar-right">
+                            <span id="timeDisplay"></span>
+                        </div>
+                    </div>
+
+                    <!-- Main Content Area -->
+                    <div class="main-area" id="mainArea">
+                        <!-- Injected by JS -->
+                    </div>
+
+                    <!-- Bottom Status Bar -->
+                    <div class="bottom-bar">
+                        <span id="statusText">Ready</span>
+                        <span id="sessionInfo"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT function buttons -->
+            <div class="side-buttons side-right">
+                <button class="fn-btn" data-side="right" data-slot="0"><span class="fn-arrow">◀</span></button>
+                <button class="fn-btn" data-side="right" data-slot="1"><span class="fn-arrow">◀</span></button>
+                <button class="fn-btn" data-side="right" data-slot="2"><span class="fn-arrow">◀</span></button>
+                <button class="fn-btn" data-side="right" data-slot="3"><span class="fn-arrow">◀</span></button>
+                <button class="fn-btn" data-side="right" data-slot="4"><span class="fn-arrow">◀</span></button>
+                <button class="fn-btn" data-side="right" data-slot="5"><span class="fn-arrow">◀</span></button>
+            </div>
+        </div>
+
+        <!-- Bottom bezel with keypad -->
+        <div class="bezel-bottom">
+            <div class="keypad-area">
+                <button class="nkey" data-key="1">1</button>
+                <button class="nkey" data-key="2">2</button>
+                <button class="nkey" data-key="3">3</button>
+                <button class="nkey" data-key="4">4</button>
+                <button class="nkey" data-key="5">5</button>
+                <button class="nkey" data-key="6">6</button>
+                <button class="nkey" data-key="7">7</button>
+                <button class="nkey" data-key="8">8</button>
+                <button class="nkey" data-key="9">9</button>
+                <button class="nkey nkey-fn" data-key="clear">CLR</button>
+                <button class="nkey" data-key="0">0</button>
+                <button class="nkey nkey-fn nkey-enter" data-key="enter">OK</button>
+            </div>
+            <div class="bezel-bottom-right">
+                <div class="card-slot-assembly">
+                    <div class="card-label">CARD</div>
+                    <div class="card-slot">
+                        <div class="card-light" id="cardLight"></div>
+                    </div>
+                </div>
+                <button class="eject-btn" id="btnEject">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 17h14M12 3v12M5 12l7-9 7 9"/></svg>
+                    EJECT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
